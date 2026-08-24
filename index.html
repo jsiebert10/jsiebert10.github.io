@@ -20,19 +20,6 @@
     --radius:14px;
     --maxw:920px;
   }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --bg:#14181a;
-      --bg-alt:#1a1f21;
-      --surface:#1e2426;
-      --text:#eef1ef;
-      --text-muted:#a2aca8;
-      --accent:#5fc4c9;
-      --accent-soft:#1d3436;
-      --border:#2b3234;
-      --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
-    }
-  }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
@@ -108,8 +95,10 @@
   @media (max-width:680px){.skills-grid{grid-template-columns:1fr;}}
   .skill-group h4{margin:0 0 8px;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--text-muted);}
   .skill-group p{margin:0;font-size:0.96rem;}
-  .edu-item{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--border);}
+  .edu-item{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--border);}
   .edu-item:last-child{border-bottom:none;}
+  .edu-main{display:flex;align-items:center;gap:14px;}
+  .edu-logo{width:38px;height:38px;object-fit:contain;flex-shrink:0;}
   .edu-item .school{font-weight:700;}
   .edu-item .deg{color:var(--text-muted);font-size:0.94rem;}
   .edu-item .time{color:var(--text-muted);font-size:0.88rem;white-space:nowrap;}
@@ -255,23 +244,32 @@
     <h2>Education &amp; Awards</h2>
     <div class="card" style="margin-bottom:18px;">
       <div class="edu-item">
-        <div>
-          <div class="school">Columbia University</div>
-          <div class="deg">M.S. in Data Science</div>
+        <div class="edu-main">
+          <img class="edu-logo" src="assets/logos/columbia.png" alt="Columbia University">
+          <div>
+            <div class="school">Columbia University</div>
+            <div class="deg">M.S. in Data Science</div>
+          </div>
         </div>
         <div class="time">Expected Dec 2026</div>
       </div>
       <div class="edu-item">
-        <div>
-          <div class="school">University of Chile</div>
-          <div class="deg">M.S. in Operations Management — Highest Honors</div>
+        <div class="edu-main">
+          <img class="edu-logo" src="assets/logos/fcfm.svg" alt="Universidad de Chile, FCFM">
+          <div>
+            <div class="school">University of Chile</div>
+            <div class="deg">M.S. in Operations Management — Highest Honors</div>
+          </div>
         </div>
         <div class="time">Jan 2022</div>
       </div>
       <div class="edu-item">
-        <div>
-          <div class="school">University of Chile</div>
-          <div class="deg">B.S. in Industrial Engineering — Highest Honors</div>
+        <div class="edu-main">
+          <img class="edu-logo" src="assets/logos/fcfm.svg" alt="Universidad de Chile, FCFM">
+          <div>
+            <div class="school">University of Chile</div>
+            <div class="deg">B.S. in Industrial Engineering — Highest Honors</div>
+          </div>
         </div>
         <div class="time">Jan 2022</div>
       </div>
