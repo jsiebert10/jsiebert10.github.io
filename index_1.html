@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joaquin Siebert — Data Scientist</title>
+<meta name="description" content="Joaquin Siebert Sandoval — Data Scientist. Optimization, ML and simulation for operational impact. M.S. Data Science, Columbia University.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23155e63'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' fill='%23f2ede3' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#f7f5f0;
+    --bg-alt:#eeeae1;
+    --surface:#ffffff;
+    --text:#1c2321;
+    --text-muted:#5a615e;
+    --accent:#155e63;
+    --accent-soft:#e4efee;
+    --border:#e1dcd0;
+    --shadow:0 1px 2px rgba(28,35,33,0.04), 0 8px 24px rgba(28,35,33,0.06);
+    --radius:14px;
+    --maxw:920px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14181a;
+      --bg-alt:#1a1f21;
+      --surface:#1e2426;
+      --text:#eef1ef;
+      --text-muted:#a2aca8;
+      --accent:#5fc4c9;
+      --accent-soft:#1d3436;
+      --border:#2b3234;
+      --shadow:0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    }
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  header.nav{
+    position:sticky;top:0;z-index:10;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+  }
+  .nav-name{font-weight:700;letter-spacing:-0.01em;font-size:1.02rem;color:var(--text);}
+  .nav-links{display:flex;gap:20px;font-size:0.92rem;flex-wrap:wrap;}
+  .nav-links a{color:var(--text-muted);}
+  .nav-links a:hover{color:var(--accent);}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:10px 18px;border-radius:999px;
+    background:var(--accent);color:#fff;font-weight:600;font-size:0.92rem;
+    border:1px solid transparent;
+  }
+  .btn:hover{opacity:0.92;text-decoration:none;}
+  .btn.ghost{
+    background:transparent;color:var(--text);border:1px solid var(--border);
+  }
+  .hero{padding:76px 0 56px;}
+  .eyebrow{
+    color:var(--accent);font-weight:600;font-size:0.85rem;
+    letter-spacing:0.06em;text-transform:uppercase;margin:0 0 14px;
+  }
+  h1{font-size:clamp(2rem,4.5vw,2.9rem);line-height:1.15;margin:0 0 16px;letter-spacing:-0.02em;}
+  .lede{font-size:1.15rem;color:var(--text-muted);max-width:640px;margin:0 0 28px;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;}
+  section{padding:52px 0;border-top:1px solid var(--border);}
+  h2{font-size:1.5rem;margin:0 0 28px;letter-spacing:-0.01em;}
+  .card{
+    background:var(--surface);border:1px solid var(--border);
+    border-radius:var(--radius);padding:24px 26px;box-shadow:var(--shadow);
+  }
+  .xp{display:flex;flex-direction:column;gap:20px;}
+  .xp-item{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:22px 26px;box-shadow:var(--shadow);
+  }
+  .xp-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 16px;}
+  .xp-role{font-weight:700;font-size:1.05rem;}
+  .xp-org{color:var(--accent);font-weight:600;}
+  .xp-time{color:var(--text-muted);font-size:0.88rem;white-space:nowrap;}
+  .xp-item ul{margin:12px 0 0;padding-left:20px;color:var(--text-muted);}
+  .xp-item li{margin-bottom:6px;}
+  .xp-item li b{color:var(--text);}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  @media (max-width:680px){.grid{grid-template-columns:1fr;}}
+  .proj h3{margin:0 0 8px;font-size:1.05rem;}
+  .proj p{margin:0;color:var(--text-muted);font-size:0.94rem;}
+  .tag{
+    display:inline-block;background:var(--accent-soft);color:var(--accent);
+    font-size:0.78rem;font-weight:600;padding:3px 10px;border-radius:999px;margin:0 6px 8px 0;
+  }
+  .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 32px;}
+  @media (max-width:680px){.skills-grid{grid-template-columns:1fr;}}
+  .skill-group h4{margin:0 0 8px;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--text-muted);}
+  .skill-group p{margin:0;font-size:0.96rem;}
+  .edu-item{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--border);}
+  .edu-item:last-child{border-bottom:none;}
+  .edu-item .school{font-weight:700;}
+  .edu-item .deg{color:var(--text-muted);font-size:0.94rem;}
+  .edu-item .time{color:var(--text-muted);font-size:0.88rem;white-space:nowrap;}
+  .awards ul{margin:0;padding-left:20px;color:var(--text-muted);}
+  .awards li{margin-bottom:8px;}
+  footer{padding:48px 0 64px;text-align:center;color:var(--text-muted);}
+  footer .contact-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:18px 0;font-size:0.98rem;}
+  footer p.note{max-width:520px;margin:20px auto 0;font-size:0.9rem;}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="nav-name">Joaquin Siebert</div>
+    <nav class="nav-links">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero" style="border-top:none;">
+    <p class="eyebrow">Data Scientist</p>
+    <h1>I turn optimization, ML and simulation into operational impact.</h1>
+    <p class="lede">M.S. Data Science candidate at Columbia University (Dec 2026), Industrial Engineer, and Franz Edelman Award winner. I've spent the last few years building optimization models, ML pipelines and analytics platforms for airlines and fintech, and leading award-winning public-health research in Chile.</p>
+    <div class="hero-actions">
+      <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+      <a class="btn ghost" href="https://github.com/jsiebert10" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/joaquinsiebert" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="mailto:j.siebert@columbia.edu">Email</a>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="xp">
+
+      <div class="xp-item">
+        <div class="xp-head">
+          <div><span class="xp-role">Mid-Senior Data Scientist</span> · <span class="xp-org">Neuralworks SpA</span></div>
+          <div class="xp-time">Apr 2024 – Jul 2025 · Santiago, Chile</div>
+        </div>
+        <ul>
+          <li>Developed <b>optimization models (Gurobi + Python)</b> for aircraft engine maintenance scheduling for one of South America's largest airlines, cutting operating costs by <b>~USD 2.6M</b> by avoiding additional engine leasing.</li>
+          <li>Designed and analyzed <b>A/B tests in R</b> to evaluate operational improvements to maintenance systems.</li>
+          <li>Mentored 4 mid-senior data scientists on career development and team practices.</li>
+        </ul>
+      </div>
+
+      <div class="xp-item">
+        <div class="xp-head">
+          <div><span class="xp-role">Head of Data</span> · <span class="xp-org">Tucar SpA</span></div>
+          <div class="xp-time">Jan 2023 – Apr 2024 · Santiago, Chile</div>
+        </div>
+        <ul>
+          <li>Co-founded and led the Data team; built the company's <b>data warehouse</b> (PySpark/Airflow ETL, MongoDB → BigQuery) powering analytics and BI at scale.</li>
+          <li>Built real-time <b>BI dashboards</b> (Streamlit, Looker Studio) over millions of rows for driver, fleet and financing KPIs, including heatmap/GPS cross-referencing for fine assignment.</li>
+        </ul>
+      </div>
+
+      <div class="xp-item">
+        <div class="xp-head">
+          <div><span class="xp-role">Data Scientist</span> · <span class="xp-org">Tucar SpA</span></div>
+          <div class="xp-time">Mar 2022 – Jan 2023 · Santiago, Chile</div>
+        </div>
+        <ul>
+          <li>Built a <b>Python/GeoPandas hotspot-detection</b> algorithm for vehicle impounds and robberies, cutting incidents <b>25%</b> and operational costs <b>6%</b>.</li>
+          <li>Built <b>unsupervised learning pipelines</b> (K-Means, hierarchical clustering) for customer risk segmentation, reducing payment defaults <b>70%</b>.</li>
+        </ul>
+      </div>
+
+      <div class="xp-item">
+        <div class="xp-head">
+          <div><span class="xp-role">Researcher</span> · <span class="xp-org">Institute of Complex Engineering Systems</span></div>
+          <div class="xp-time">Sep 2020 – May 2022 · Santiago, Chile</div>
+        </div>
+        <ul>
+          <li>Modeled <b>origin-destination mobility flows</b> in Santiago during COVID-19 to support public-policy risk-zone labeling.</li>
+          <li>Built <b>agent-based transmission simulations</b> to design Testing/Tracing/Isolating policies for Chilean K-12 schools — work presented at the <b>Franz Edelman Award</b> (INFORMS, 2022).</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="grid">
+      <div class="card proj">
+        <span class="tag">Public Health · Optimization</span>
+        <h3>Analytics Saves Lives During the COVID-19 Crisis in Chile</h3>
+        <p>Origin-destination mobility modeling and agent-based transmission simulation used to guide safe school-reopening policy nationwide. Winner, Franz Edelman Award (INFORMS), 2022.</p>
+      </div>
+      <div class="card proj">
+        <span class="tag">Optimization · Aviation</span>
+        <h3>Aircraft Engine Maintenance Optimization</h3>
+        <p>Mixed-integer programming model (Gurobi/Python) scheduling engine maintenance for LATAM Airlines, replacing manual planning and saving ~USD 2.6M in operating costs.</p>
+      </div>
+      <div class="card proj">
+        <span class="tag">Data Platform · Fintech</span>
+        <h3>Tucar Data Warehouse & BI Platform</h3>
+        <p>End-to-end pipeline (PySpark, Airflow, MongoDB → BigQuery) and Streamlit/Looker Studio dashboards powering fleet, risk and finance decisions for a vehicle-financing company.</p>
+      </div>
+      <div class="card proj">
+        <span class="tag">ML · Risk</span>
+        <h3>Hotspot Detection & Credit Risk Segmentation</h3>
+        <p>GeoPandas-based geospatial hotspot detection for theft/impound risk, plus unsupervised ML for customer risk segmentation — cutting incidents 25% and defaults 70%.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Languages &amp; ML</h4>
+        <p>Python (Pandas, NumPy, scikit-learn, TensorFlow, SimPy, Gurobipy, LangChain, Transformers), R, SQL</p>
+      </div>
+      <div class="skill-group">
+        <h4>Optimization &amp; Simulation</h4>
+        <p>Gurobi, CPLEX, Monte Carlo methods, agent-based modeling</p>
+      </div>
+      <div class="skill-group">
+        <h4>Data Platforms</h4>
+        <p>GCP BigQuery, GCP Vertex AI, MongoDB, Airflow, PySpark</p>
+      </div>
+      <div class="skill-group">
+        <h4>Visualization &amp; BI</h4>
+        <p>Power BI, Google Looker Studio, Streamlit</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education &amp; Awards</h2>
+    <div class="card" style="margin-bottom:18px;">
+      <div class="edu-item">
+        <div>
+          <div class="school">Columbia University</div>
+          <div class="deg">M.S. in Data Science</div>
+        </div>
+        <div class="time">Expected Dec 2026</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="school">University of Chile</div>
+          <div class="deg">M.S. in Operations Management — Highest Honors, GPA 3.7/4.0</div>
+        </div>
+        <div class="time">Jan 2022</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="school">University of Chile</div>
+          <div class="deg">B.S. in Industrial Engineering — Highest Honors, GPA 4.0/4.0</div>
+        </div>
+        <div class="time">Jan 2022</div>
+      </div>
+    </div>
+    <div class="card awards">
+      <ul>
+        <li><b>Becas Chile Fellowship</b> (2025) — fully-funded, merit-based national scholarship for graduate studies at Columbia University.</li>
+        <li><b>Franz Edelman Award</b> winner (INFORMS), 2022 — "Analytics Saves Lives During the COVID-19 Crisis in Chile."</li>
+        <li>Dean's List, Top 5% — University of Chile School of Engineering, 2019–2021.</li>
+        <li>Co-author, "An Analytics Approach to the Ranking FIFA Procedure and the World Cup Final Draw."</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2 style="border:none;padding:0;margin-bottom:8px;">Let's talk</h2>
+    <p>Open to Data Scientist, Applied Scientist and Forward Deployed Scientist roles.</p>
+    <div class="contact-links">
+      <a href="mailto:j.siebert@columbia.edu">j.siebert@columbia.edu</a>
+      <a href="https://www.linkedin.com/in/joaquinsiebert" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/jsiebert10" target="_blank" rel="noopener">GitHub</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    </div>
+    <p class="note">© 2026 Joaquin Siebert Sandoval · New York, NY</p>
+  </div>
+</footer>
+
+</body>
+</html>
